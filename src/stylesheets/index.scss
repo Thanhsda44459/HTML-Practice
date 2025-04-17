@@ -1,0 +1,19 @@
+// @use "abstracts/variables";
+// @use "../abstracts/variables" as *;
+// @use "base/reset";
+// @use "components/hero";
+// @use "layouts/footer";
+// @use "layouts/header";
+// @use "layouts/main";
+
+// @use "./abstracts/variables" as *;
+// @use "abstracts/_variables" as *;
+// @use "./base/reset" as *;
+// @use "./components/hero" as *;
+// @use "./layouts/footer" as *;
+// @use "./layouts/header" as *;
+// @use "./layouts/main" as *;
+@use "base";
+@use "layouts/" as *;
+@use "abstracts";
+@use "components";
