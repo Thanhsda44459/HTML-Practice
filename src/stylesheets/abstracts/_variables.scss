@@ -1,4 +1,11 @@
-  
+@font-face {
+  font-family: 'Lexend';
+  src: url('../assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
   /* ===== TYPOGRAPHY ===== */
   $font-primary: 'Lexend', sans-serif;
   $font-size-title: 2.5rem;      // 40px cho "Find The Place..."
