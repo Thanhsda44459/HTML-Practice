@@ -1,0 +1,79 @@
+@use '../abstracts/' as *;
+
+.stats {
+  background: url('../assets/images/house-hero-section.png') center/cover no-repeat;
+  border-bottom-left-radius: $border-radius-lg;
+  width: 50%;
+  height: 720px;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+
+  .stat-cards {
+    position: absolute;
+    bottom: 30px;
+    padding: 48px;
+    display: flex;
+    gap: 16px;
+
+    .stat-card {
+      display: flex;
+      height: 104px;
+      align-items: center;
+      padding: 24px;
+      background: $white;
+      gap: 16px;
+      border-radius: $border-radius-sm;
+      min-width: 200px;
+      cursor: pointer;
+      transition: $transition-default;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+
+      .avatars {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          box-shadow: $box-shadow-light;
+
+          &:nth-child(2) {
+            margin-left: -28px;
+          }
+
+          &:nth-child(3) {
+            margin-left: -28px;
+          }
+        }
+      }
+
+      .info {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        h4 {
+          color: $primary-color;
+          font-family: $font-primary;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+
+        p {
+          color: $neutral-700;
+          font-family: $font-primary;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
