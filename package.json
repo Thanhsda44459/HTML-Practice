@@ -12,7 +12,8 @@
   },
   "scripts": {
     "start": "parcel src/pages/index.html",
-    "build": "parcel build src/pages/index.html"
+    "build": "parcel build src/pages/index.html",
+    "clean": "rd /s /q .parcel-cache"
   },
   "keywords": [],
   "author": "",

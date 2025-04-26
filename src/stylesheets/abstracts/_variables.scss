@@ -1,21 +1,25 @@
-  
-  /* ===== TYPOGRAPHY ===== */
-  $font-primary: 'Lexend', sans-serif;
-  $font-size-title: 2.5rem;      // 40px cho "Find The Place..."
-  $font-size-subtitle: 1.25rem;  // 20px cho "Easily Here"
-  $font-size-body: 1rem;         // 16px cho nội dung
-  $font-size-small: 0.875rem;    // 14px cho chữ nhỏ (tên người)
-  
-  /* ===== SPACING ===== */
-  $section-padding: 4rem;
-  $card-gap: 2rem;               // Khoảng cách giữa các card nhà
-  
-  /* ===== CARD STYLES (Featured House) ===== */
-  $card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  $card-border-radius: 12px;
-  $card-padding: 1.5rem;
+@font-face {
+  font-family: 'Lexend';
+  src: url('../assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  $primary-color: #1a237e;
-  $secondary-color: #0288d1;
-  $accent-color: #00c853;
-  $background-gradient: linear-gradient(135deg, #e0f7fa 0%, #80deea 100%);
+$primary-color: #1B1C57;
+$secondary-color: #10B981;
+$neutral-100: #F0F3FD;
+$neutral-300: #E0E3EB;
+$neutral-500: #888B97;
+$neutral-600: #626687;
+$neutral-700: #68799F;
+$white: #FFF;
+$background-light: #F0FAFD;
+
+$font-primary: 'Lexend', sans-serif;
+
+$border-radius-sm: 32px;
+$border-radius-lg: 80px;
+
+$transition-default: all 0.2s ease;
+$box-shadow-light: 0px 9px 32px 0px rgba(89, 92, 219, 0.10);
