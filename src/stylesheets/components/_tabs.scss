@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+
+.featured-house {
+  &__tabs {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__tab {
+    display: flex;
+    padding: 14px 24px;
+    align-items: center;
+    gap: 8px;
+    border-radius: $border-radius-sm;
+    border: 1px solid $neutral-300;
+    cursor: pointer;
+    background: $white;
+    font-family: $font-primary;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    &--active {
+      color: $secondary-color;
+      background: $green-100;
+    }
+
+    &--inactive {
+      background-color: $background-gray;
+      color: $neutral-600;
+    }
+  }
+}

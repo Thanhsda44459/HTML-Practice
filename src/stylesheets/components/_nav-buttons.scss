@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+
+.featured-house {
+  &__nav {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__nav-btn {
+    background-color: $background-gray;
+    border: none;
+    border-radius: $border-radius-sm;
+    width: 60px;
+    height: 52px;
+    padding: 12px 16px;
+    cursor: pointer;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+
+    &--right {
+      background-color: $secondary-color;
+
+      img {
+        filter: brightness(0) invert(1); /* Icon trắng trên nền xanh */
+      }
+    }
+  }
+}

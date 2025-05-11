@@ -1,0 +1,17 @@
+<each loop="house in houses">
+  <div class="featured-house__card">
+    <img class="featured-house__card-image" src="{{ house.image }}" alt="{{ house.title }}">
+    <div class="featured-house__label featured-house__label--{{ house.labelType }}">{{ house.label }}</div>
+    <div class="featured-house__content">
+      <h3 class="featured-house__card-title">{{ house.title }}</h3>
+      <p class="featured-house__price">{{ house.price }}</p>
+      <div class="featured-house__seller">
+        <img class="featured-house__seller-avatar" src="{{ house.seller.avatar }}" alt="Avatar">
+        <div class="featured-house__seller-info">
+          <p class="featured-house__seller-name">{{ house.seller.name }}</p>
+          <p class="featured-house__seller-location">{{ house.seller.location }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</each>

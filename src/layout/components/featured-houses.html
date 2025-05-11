@@ -1,0 +1,100 @@
+<section class="featured-house">
+  <div class="featured-house__header">
+    <h2 class="featured-house__title">Featured House</h2>
+    <div class="featured-house__tabs">
+      <include src="components/tabs.html" locals='{
+        "tabs": [
+          {
+            "icon": "../assets/icons/house.svg",
+            "alt": "House Icon",
+            "label": "House",
+            "active": true
+          },
+          {
+            "icon": "../assets/icons/villa.svg",
+            "alt": "Villa Icon",
+            "label": "Villa",
+            "active": false
+          },
+          {
+            "icon": "../assets/icons/apartment.svg",
+            "alt": "Apartment Icon",
+            "label": "Apartment",
+            "active": false
+          }
+        ]
+      }'></include>
+    </div>
+    <div class="featured-house__nav">
+      <include src="components/nav-buttons.html" locals='{
+        "navButtons": [
+          {
+            "icon": "../assets/icons/arrow-left.svg",
+            "alt": "Left Arrow",
+            "direction": "left"
+          },
+          {
+            "icon": "../assets/icons/arrow-right.svg",
+            "alt": "Right Arrow",
+            "direction": "right"
+          }
+        ]
+      }'></include>
+    </div>
+  </div>
+
+  <div class="featured-house__cards">
+    <include src="components/house-card.html" locals='{
+      "houses": [
+        {
+          "image": "../assets/images/featured-house-1.png",
+          "title": "Roselands House",
+          "label": "Popular",
+          "labelType": "popular",
+          "price": "$35,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-1.png",
+            "name": "Dianne Russell",
+            "location": "Manchester, Kentucky"
+          }
+        },
+        {
+          "image": "../assets/images/featured-house-2.png",
+          "title": "Woodlandside",
+          "label": "New",
+          "labelType": "new",
+          "price": "$20,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-2.png",
+            "name": "Robert Fox",
+            "location": "Dr. San Jose, South Dakota"
+          }
+        },
+        {
+          "image": "../assets/images/featured-house-3.png",
+          "title": "The Old Lighthouse",
+          "label": "Best Deals",
+          "labelType": "best-deals",
+          "price": "$44,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-3.png",
+            "name": "Ronald Richards",
+            "location": "Santa Ana, Illinois"
+          }
+        },
+        {
+          "image": "../assets/images/featured-house-4.png",
+          "title": "Cosmos House",
+          "label": "Popular",
+          "labelType": "popular",
+          "price": "$22,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-4.png",
+            "name": "Jenny Wilson",
+            "location": "Preston Rd. Inglewood"
+          }
+        }
+      ]
+    }'></include>
+  </div>
+</section>

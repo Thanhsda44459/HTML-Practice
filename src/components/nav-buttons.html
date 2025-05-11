@@ -1,0 +1,5 @@
+<each loop="btn in navButtons">
+  <button class="featured-house__nav-btn {{ btn.direction === 'left' ? 'featured-house__nav-btn--left' : 'featured-house__nav-btn--right' }}">
+    <img src="{{ btn.icon }}" alt="{{ btn.alt }}">
+  </button>
+</each>

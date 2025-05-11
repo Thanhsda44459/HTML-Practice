@@ -1,9 +1,15 @@
-<div class="partner">
-  <h3>Our Partnership</h3>
-  <div class="partner-logos">
-    <img src="..\assets\images\logo-traveloka.png" alt="Traveloka" />
-    <img src="../assets/images/logo-tiket.png" alt="Ticket.com" />
-    <img src="..\assets\images\logo-airbnb.png" alt="Airbnb" />
-    <img src="..\assets\images\logo-tripadvisor.png" alt="TripAdvisor" />
+<each loop="item in list">
+  <div class="partner">
+    <if condition="item.text">
+      <h3>{{ item.text }}</h3>
+    </if>
+    <div class="partner-logos">
+      <img src="{{item.img1}}" alt="Traveloka" />
+      <img src="{{item.img1}}" alt="Ticket.com" />
+      <img src="{{item.img1}}" alt="Airbnb" />
+      <if condition="item.img4">
+        <img src="{{item.img1}}" alt="TripAdvisor" />
+      </if>
+    </div>
   </div>
-</div>
+</each>

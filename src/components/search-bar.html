@@ -1,12 +1,16 @@
-<div class="search-bar">
-    <img src="..\assets\icons\location.svg" alt="">
-    <input type="text" placeholder="Search for the location you want!" />
+<each loop="item in searchBars">
+  <div class="search-bar">
+    <img src="{{ item.img1 }}" alt="">
+    <input type="text" placeholder="{{ item.placeholder }}" />
     <button class="btn-search">
-      <p>Search </p>
+      <p>{{item.text}}</p>
+      <if condition="item.img2">
       <span class="arrow">
-        <img src="..\assets\icons\arrow-right.svg" alt="">
+        <img src="{{ item.img2 }}" alt="">
       </span>
+    </if>
     </button>
   </div>
+</each>
 
 
