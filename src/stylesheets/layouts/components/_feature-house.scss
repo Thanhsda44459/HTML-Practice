@@ -1,207 +1,24 @@
 @use '../../abstracts/' as *;
 
+
 .featured-house {
-    // padding: 20px;
-    padding-left: 160px;
-    max-width: 100%;
-    margin: 140px auto;
+  padding-left: 160px;
+  max-width: 100%;
+  margin: 140px auto;
 
-    &__header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 40px;
-    }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
 
-    &__title {
-        color: var(--MRT-App-Headline, #1B1C57);
-        font-family: Lexend;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: capitalize;
-    }
-
-    &__tabs {
-      display: flex;
-      gap: 40px;
-    }
-    
-    &__tab { 
-      display: flex;
-      padding: 14px 24px;
-      align-items: center;
-      gap: 8px;
-      border-radius: 32px;
-      border: 1px solid var(--Neutral-300, #E0E3EB);
-      cursor: pointer;
-      background: #fff;
-      font-family: Lexend;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 28px;
-    
-      img {
-        width: 24px;
-        height: 24px;
-      }
-    
-      &--active { 
-        color:  $secondary-color;
-        background: var(--Green-100, #D1FAE5);
-      }
-    
-      &--inactive {
-        background-color: #f5f5f5;
-        color: #666;
-      }
-    }
-
-    &__nav {
-      display: flex;
-      gap: 16px;
-    }
-
-    &__nav-btn {
-      background-color: #f5f5f5;
-      border: none;
-      border-radius: 32px;
-      width: 60px;
-      height: 52px;
-      padding: 12px 16px;
-      cursor: pointer;
-
-      img {
-        width: 28px;
-        height: 28px;
-      }
-
-      &--right {
-        background-color: #10B981;
-
-        img {
-          filter: brightness(0) invert(1); /* Icon trắng trên nền xanh */
-        }
-      }
-    }
-
-    &__cards {
-      display: flex;
-      gap: 20px;
-      overflow: hidden; 
-      padding-bottom: 10px;
-    }
-
-    &__card {
-      position: relative;
-      min-width: 340px;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    &__card-image {
-      width: 340px;
-      height: 382px;
-      object-fit: cover;
-      border-radius: 0 0 20px 20px;
-    }
-
-    &__label {
-      position: absolute;
-      bottom: 160px;
-      left: 16px;
-      padding: 8px 16px;
-      border-radius: 32px;
-      font-family: Lexend;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: normal;
-      text-transform: capitalize;
-      align-items: flex-start;
-      gap: 10px;
-
-      &--popular {
-        background: var(--Red-100, #FEE2E2);
-        color: var(--Red-500, #EF4444);
-      }
-
-      &--new {
-        background: var(--Blue-100, #DBEAFE);
-        color: var(--Blue-700, #1D4ED8);
-      }
-
-      &--best-deals {
-        background: var(--Green-100, #D1FAE5);
-        color: var(--Green-700, #047857);
-      }
-    }
-
-    &__content {
-      padding: 15px;
-      background-color: #fff;
-    }
-
-    &__card-title {
-      color: var(--Neutral-900, #0E1735);
-      font-family: Lexend;
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 32px;
-    }
-
-    &__price {
-      color: var(--Neutral-700, #3C4563);
-      font-family: Lexend;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 32px; 
-    }
-
-    &__seller {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      position: relative;
-
-      img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-        position: relative;
-        z-index: 1;
-      }
-      
-    }
-
-    &__seller-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    &__seller-name {
-      color: var(--Neutral-900, #0E1735);
-      font-family: Lexend;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 24px; /* 133.333% */
-    }
-
-    &__seller-location {
-      color: var(--Neutral-500, #888B97);
-      font-family: Lexend;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 22px; /* 157.143% */
-    }
+  &__title {
+    color: $primary-color;
+    font-family: $font-primary;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
 }
-
-

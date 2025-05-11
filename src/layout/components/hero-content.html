@@ -8,12 +8,48 @@
           {
             "img1": "../assets/icons/location.svg",
             "placeholder": "Search for the location you want!",
+            "text": "Search",
             "img2": "../assets/icons/arrow-right.svg"
           }
         ]
       }'></include>
-      <include src="components/partners.html"></include>
+
+      <include src="components/partners.html" locals='{
+         "list": [
+          {
+            "text": "Our Partnership",
+            "img1": "../assets/images/logo-traveloka.png",
+            "img2": "../assets/images/logo-tiket.png",
+            "img3": "../assets/images/logo-airbnb.png",
+            "img4": "../assets/images/logo-tripadvisor.png"
+          }
+        ]
+      }'></include>
     </div>
-    <include src="components/stats.html"></include>
+
+    <include src="components/stats.html" locals='{
+      "stats": [
+        {
+          "img1": "../assets/images/card-avatar-1.png",
+          "img2": "../assets/images/card-avatar-2.png",
+          "img3": "../assets/images/card-avatar-3.png",
+          "title": "1K+ People",
+          "desc": "Successfully Getting Home"
+        },
+        {
+          "icon": "../assets/images/card-house.png",
+          "alt": "House icon",
+          "title": "56 Houses",
+          "desc": "Sold Monthly"
+        },
+        {
+          "icon": "../assets/images/card-avatar-4.png",
+          "alt": "Search icon",
+          "title": "4K+",
+          "desc": "People Looking for New Homes"
+        }
+      ]
+    }'></include>
+
   </div>
 </section>

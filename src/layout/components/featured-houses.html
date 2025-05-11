@@ -1,93 +1,100 @@
 <section class="featured-house">
-    <div class="featured-house__header">
-        <h2 class="featured-house__title">Featured House</h2>
-        <div class="featured-house__tabs">
-            <button class="featured-house__tab featured-house__tab--active">
-                <img src="../assets/icons/house.svg" alt="House Icon">
-                House
-            </button>
-            <button class="featured-house__tab featured-house__tab--inactive">
-                <img src="../assets/icons/villa.svg" alt="Villa Icon">
-                Villa
-            </button>
-            <button class="featured-house__tab featured-house__tab--inactive">
-                <img src="../assets/icons/apartment.svg" alt="Apartment Icon">
-                Apartment
-            </button>
-        </div>
-        <div class="featured-house__nav">
-            <button class="featured-house__nav-btn featured-house__nav-btn--left">
-                <img src="../assets/icons/arrow-left.svg" alt="Left Arrow">
-            </button>
-            <button class="featured-house__nav-btn featured-house__nav-btn--right">
-                <img src="../assets/icons/arrow-right.svg" alt="Right Arrow">
-            </button>
-        </div>
+  <div class="featured-house__header">
+    <h2 class="featured-house__title">Featured House</h2>
+    <div class="featured-house__tabs">
+      <include src="components/tabs.html" locals='{
+        "tabs": [
+          {
+            "icon": "../assets/icons/house.svg",
+            "alt": "House Icon",
+            "label": "House",
+            "active": true
+          },
+          {
+            "icon": "../assets/icons/villa.svg",
+            "alt": "Villa Icon",
+            "label": "Villa",
+            "active": false
+          },
+          {
+            "icon": "../assets/icons/apartment.svg",
+            "alt": "Apartment Icon",
+            "label": "Apartment",
+            "active": false
+          }
+        ]
+      }'></include>
     </div>
-
-    <div class="featured-house__cards">
-        <div class="featured-house__card">
-            <img class="featured-house__card-image" src="../assets/images/featured-house-1.png" alt="Roselands House">
-            <div class="featured-house__label featured-house__label--popular">Popular</div>
-            <div class="featured-house__content">
-                <h3 class="featured-house__card-title">Roselands House</h3>
-                <p class="featured-house__price">$35,000,000</p>
-                <div class="featured-house__seller">
-                    <img class="featured-house__seller-avatar" src="../assets/images/card-avatar-1.png" alt="Avatar">
-                    <div class="featured-house__seller-info">
-                        <p class="featured-house__seller-name">Dianne Russell</p>
-                        <p class="featured-house__seller-location">Manchester, Kentucky</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="featured-house__card">
-            <img class="featured-house__card-image" src="../assets/images/featured-house-2.png" alt="Woodlandside">
-            <div class="featured-house__label featured-house__label--new">New</div>
-            <div class="featured-house__content">
-                <h3 class="featured-house__card-title">Woodlandside</h3>
-                <p class="featured-house__price">$20,000,000</p>
-                <div class="featured-house__seller">
-                    <img class="featured-house__seller-avatar" src="../assets/images/card-avatar-2.png" alt="Avatar">
-                    <div class="featured-house__seller-info">
-                        <p class="featured-house__seller-name">Robert Fox</p>
-                        <p class="featured-house__seller-location">Dr. San Jose, South Dakota</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="featured-house__card">
-            <img class="featured-house__card-image" src="../assets/images/featured-house-3.png" alt="The Old Lighthouse">
-            <div class="featured-house__label featured-house__label--best-deals">Best Deals</div>
-            <div class="featured-house__content">
-                <h3 class="featured-house__card-title">The Old Lighthouse</h3>
-                <p class="featured-house__price">$44,000,000</p>
-                <div class="featured-house__seller">
-                    <img class="featured-house__seller-avatar" src="../assets/images/card-avatar-3.png" alt="Avatar">
-                    <div class="featured-house__seller-info">
-                        <p class="featured-house__seller-name">Ronald Richards</p>
-                        <p class="featured-house__seller-location">Santa Ana, Illinois</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="featured-house__card">
-            <img class="featured-house__card-image" src="../assets/images/featured-house-4.png" alt="Cosmo's House">
-            <div class="featured-house__label featured-house__label--popular">Popular</div>
-            <div class="featured-house__content">
-                <h3 class="featured-house__card-title">Cosmo's House</h3>
-                <p class="featured-house__price">$22,000,000</p>
-                <div class="featured-house__seller">
-                    <img class="featured-house__seller-avatar" src="../assets/images/card-avatar-4.png" alt="Avatar">
-                    <div class="featured-house__seller-info">
-                        <p class="featured-house__seller-name">Jenny Wilson</p>
-                        <p class="featured-house__seller-location">Preston Rd. Inglewood</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="featured-house__nav">
+      <include src="components/nav-buttons.html" locals='{
+        "navButtons": [
+          {
+            "icon": "../assets/icons/arrow-left.svg",
+            "alt": "Left Arrow",
+            "direction": "left"
+          },
+          {
+            "icon": "../assets/icons/arrow-right.svg",
+            "alt": "Right Arrow",
+            "direction": "right"
+          }
+        ]
+      }'></include>
     </div>
+  </div>
+
+  <div class="featured-house__cards">
+    <include src="components/house-card.html" locals='{
+      "houses": [
+        {
+          "image": "../assets/images/featured-house-1.png",
+          "title": "Roselands House",
+          "label": "Popular",
+          "labelType": "popular",
+          "price": "$35,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-1.png",
+            "name": "Dianne Russell",
+            "location": "Manchester, Kentucky"
+          }
+        },
+        {
+          "image": "../assets/images/featured-house-2.png",
+          "title": "Woodlandside",
+          "label": "New",
+          "labelType": "new",
+          "price": "$20,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-2.png",
+            "name": "Robert Fox",
+            "location": "Dr. San Jose, South Dakota"
+          }
+        },
+        {
+          "image": "../assets/images/featured-house-3.png",
+          "title": "The Old Lighthouse",
+          "label": "Best Deals",
+          "labelType": "best-deals",
+          "price": "$44,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-3.png",
+            "name": "Ronald Richards",
+            "location": "Santa Ana, Illinois"
+          }
+        },
+        {
+          "image": "../assets/images/featured-house-4.png",
+          "title": "Cosmos House",
+          "label": "Popular",
+          "labelType": "popular",
+          "price": "$22,000,000",
+          "seller": {
+            "avatar": "../assets/images/card-avatar-4.png",
+            "name": "Jenny Wilson",
+            "location": "Preston Rd. Inglewood"
+          }
+        }
+      ]
+    }'></include>
+  </div>
 </section>

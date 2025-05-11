@@ -1,0 +1,6 @@
+<each loop="tab in tabs">
+  <button class="featured-house__tab {{ tab.active ? 'featured-house__tab--active' : 'featured-house__tab--inactive' }}">
+    <img src="{{ tab.icon }}" alt="{{ tab.alt }}">
+    {{ tab.label }}
+  </button>
+</each>
