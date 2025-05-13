@@ -1,0 +1,50 @@
+<section class="let-tour">
+  <div class="let-tour__content">
+    <h1 class="let-tour__content--title">Let’s tour and see our house!</h1>
+    <p class="let-tour__content--desc">
+      Houses recommended by our partners that have been curated to become the
+      home of your dreams!
+    </p>
+
+    <div class="let-tour__detail">
+      <h3 class="let-tour__detail-title">House Detail</h3>
+      <ul class="let-tour__detail-list">
+        <each loop="item in {{ detail }}">
+            <li class="let-tour__detail-item">
+                <img src="{{ item.img }}" alt="" />
+                <span>{{ item.text }}</span>
+            </li>
+        </each>
+      </ul>
+    </div>
+
+    <include src="./components/contact.html" locals='{
+    "contact": {
+        "imgSrc": "../assets/images/tour-avatar-1.svg",
+        "imgAlt": "Dianne Russell",
+        "name": "Dianne Russell",
+        "role": "Manager Director",
+        "btnImgSrc": "../assets/icons/call.svg",
+        "btnImgAlt": "Call Icon",
+        "btnText": "Contact Now",
+        "class": "let-tour__contact"
+    }
+    }'>
+  </div>
+
+  <div class="let-tour__images">
+    <div class="let-tour__main-image">
+      <img
+        src="..\assets\images\tour-house.png" class="let-tour__main-image-src" alt=""
+      />
+      <div class="let-tour__play-btn">
+        <img src="..\assets\icons\play.svg" alt="" />
+      </div>
+    </div>
+    <div class="let-tour__thumbnails">
+        <each loop="item in {{ imgItems }}">
+            <img src="{{ item.img }}" alt="" class="let-tour__thumbnail"/>
+        </each>
+    </div>
+  </div>
+</section>
