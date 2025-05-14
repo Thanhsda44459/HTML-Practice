@@ -55,7 +55,7 @@
     }
   }
 
-  &__contact {
+  .let-tour__contact {
     display: flex;
     padding-top: 30px;
     border-top: solid 2px $neutral-500;
@@ -65,6 +65,7 @@
     }
     &-info {
       padding-right: 60px;
+      flex: 1;
     }
     &-name {
       color: $neutral-900;
