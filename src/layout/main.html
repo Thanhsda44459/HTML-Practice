@@ -3,3 +3,17 @@
 
  <!-- Include Feature-house section -->
 <include src="./layout/components/featured-houses.html"></include>
+ <!-- Include Let-tour section -->
+<include src="./layout/components/let-tour.html" locals='{
+    "detail": [
+        {"img": "../assets/icons/bed.svg", "text": "4 Bedrooms"},
+        {"img": "../assets/icons/bath.svg", "text": "2 Bathrooms"},
+        {"img": "../assets/icons/car-garage.svg", "text": "1 Carport"},
+        {"img": "../assets/icons/stairs.svg", "text": "2 Floors"}
+    ],
+    "imgItems": [
+        {"img": "../assets/images/tour-chart.png"},
+        {"img": "../assets/images/tour-chart-1.png"},
+        {"img": "../assets/images/tour-decor.png"}
+    ]
+}'></include>
