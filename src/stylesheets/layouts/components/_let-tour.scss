@@ -83,19 +83,33 @@
       padding: 12px 16px;
       align-items: center;
       gap: 16px;
+      cursor: pointer;
       border: none;
       border-radius: $border-radius-sm;
       background: $secondary-color;
+
+      color: #FFF;
+      font-family: Lexend;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px; /* 157.143% */
+
+      &:hover {
+      background: darken($secondary-color, 10%);
+    }
     }
   }
 
   &__images {
     position: relative;
   }
+  
   &__play-btn{
     position: absolute;
     left: 220px;
     top: 185px;
+    cursor: pointer;
   }
   
   &__main--image {
