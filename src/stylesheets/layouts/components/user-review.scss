@@ -1,3 +1,4 @@
+@use '../../abstracts/' as *;
 .user-rw {
   &__header {
     margin: 0 auto;
@@ -6,8 +7,8 @@
     position: relative;
 
     &-see {
-      color: var(--Yellow-500, #f59e0b);
-      font-family: Lexend;
+      color: $yellow-500;
+      font-family: $font-primary;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -24,150 +25,19 @@
         transform: translateX(-50%);
         width: 30px;
         height: 2px;
-        background: var(--Yellow-500, #f59e0b);
+        background: $yellow-500;
       }
     }
 
     &-tittle {
-      color: var(--MRT-App-Headline, #1b1c57);
-      font-family: Lexend;
+      color: $primary-color;
+      font-family: $font-primary;
       font-size: 32px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
       text-transform: capitalize;
       margin: 10px 0 0;
-    }
-  }
-
-  &__reviews {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    gap: 56px;
-    padding: 20px 0;
-    overflow: hidden;
-
-    .user-rw__review-card {
-      position: relative;
-      width: 740px;
-      height: 505px;
-      border-radius: 16px;
-      
-      .user-rw__review-img {
-        width: 740px;
-        height: 400px;
-        object-fit: cover;
-        
-        top: 0;
-        left: 0;
-        z-index: 0;
-        border-radius: 16px;
-      }
-
-      .user-rw__review-content {
-        position: absolute;
-        bottom: 32px;
-        z-index: 1;
-        width: 612px;
-        padding: 32px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-        border-radius: 16px;
-        background: #fff;
-        box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.05);
-        left: 50%;
-        transform: translateX(-50%);
-
-        .user-rw__review-header {
-          color: var(--MRT-App-Headline, #1b1c57);
-          font-family: Lexend;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          text-transform: capitalize;
-          margin: 0;
-        }
-
-        .user-rw__review-text {
-          color: var(--MRT-App-Neutral-01, #626687);
-          font-family: Lexend;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 24px;
-          margin: 0;
-        }
-
-        .user-rw-review-author {
-          display: flex;
-          align-items: center;
-
-          .user-rw-review-author-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 24px;
-          }
-
-          .user-rw-review-author-info {
-            flex: 1;
-          }
-
-          .user-rw-review-author-name {
-            color: var(--Neutral-900, #0e1735);
-            font-family: Lexend;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 22px;
-            margin: 0;
-          }
-
-          .user-rw-review-author-role {
-            color: var(--Neutral-900, #0e1735);
-            font-family: Lexend;
-            font-size: 14px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 22px;
-            margin: 0;
-          }
-
-          .user-rw-review-author-rating {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            margin-left: 290px;
-
-            img {
-              width: 20px;
-              height: 20px;
-            }
-
-            color: var(--Neutral-700, #3c4563);
-            font-family: Lexend;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 28px;
-          }
-        }
-      }
-    }
-  }
-
-  &__pagination {
-    text-align: center;
-    padding: 20px 0;
-
-    img {
-      width: 40px;
-      height: auto;
     }
   }
 }
