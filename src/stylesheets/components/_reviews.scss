@@ -1,0 +1,125 @@
+@use '../abstracts/' as *;
+
+.user-rw__reviews {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  padding: 20px 0;
+  overflow: hidden;
+
+  .user-rw__review-card {
+    position: relative;
+    width: 740px;
+    height: 505px;
+    border-radius: 16px;
+    transition: $transition-default;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .user-rw__review-img {
+      width: 740px;
+      height: 400px;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      border-radius: 16px;
+    }
+
+    .user-rw__review-content {
+      position: absolute;
+      bottom: 32px;
+      z-index: 1;
+      width: 612px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      border-radius: 16px;
+      background: $white;
+      box-shadow: $box-shadow-light;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .user-rw__review-header {
+        color: $primary-color;
+        font-family: $font-primary;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin: 0;
+      }
+
+      .user-rw__review-text {
+        color: $neutral-600;
+        font-family: $font-primary;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        margin: 0;
+      }
+
+      .user-rw-review-author {
+        display: flex;
+        align-items: center;
+
+        .user-rw-review-author-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 24px;
+        }
+
+        .user-rw-review-author-info {
+          flex: 1;
+        }
+
+        .user-rw-review-author-name {
+          color: $neutral-900;
+          font-family: $font-primary;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px;
+          margin: 0;
+        }
+
+        .user-rw-review-author-role {
+          color: $neutral-900;
+          font-family: $font-primary;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px;
+          margin: 0;
+        }
+
+        .user-rw-review-author-rating {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          margin-left: 290px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+
+          color: $neutral-800;
+          font-family: $font-primary;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

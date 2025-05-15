@@ -1,0 +1,55 @@
+@use '../../abstracts/' as *;
+.user-rw {
+  &__header {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+
+    &-see {
+      color: $yellow-500;
+      font-family: $font-primary;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: capitalize;
+      position: relative;
+      display: inline-block;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 2px;
+        background: $yellow-500;
+      }
+    }
+
+    &-tittle {
+      color: $primary-color;
+      font-family: $font-primary;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+      margin: 10px 0 0;
+    }
+  }
+  .user-rw__pagination {
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      width: 40px;
+      height: auto;
+    }
+  }
+}
