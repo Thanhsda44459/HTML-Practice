@@ -1,0 +1,17 @@
+<section class="subscribe">
+  <h1 class="subscribe__content">Subscribe For More Info and update from Hounter</h1>
+  <div class="subscribe__search">
+    <include src="components/search-bar.html" locals='{
+      "searchBars": [
+        {
+          "img1": "../assets/icons/email.svg",
+          "placeholder": "Your email here",
+          "text": "Subscribe Now"
+        }
+      ]
+    }'></include>
+  </div>
+    <each loop="item in images">
+        <img src="{{ item.img}}" class="subscribe__img {{item.class}}">
+    </each>
+</section>
