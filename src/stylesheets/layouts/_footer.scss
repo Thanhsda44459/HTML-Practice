@@ -1,0 +1,102 @@
+@use '../abstracts/' as *;
+
+.footer {
+  padding: 120px;
+  background: $white;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 95px;
+  }
+
+  &__section {
+    h3 {
+      color: $neutral-900;
+      font-family: $font-primary;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: capitalize;
+      padding-bottom: 24px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 8px;
+
+        a {
+          text-decoration: none;
+          color: $neutral-500;
+          font-family: $font-primary;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-transform: capitalize;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    p {
+      width: 320px;
+      margin-bottom: 18px;
+      color: $neutral-500;
+      font-family: $font-primary;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      h2 {
+        font-size: 20px;
+        color: $primary-color;
+        font-family: $font-primary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+    }
+
+    .socials {
+      margin-top: 15px;
+
+      a {
+        margin-right: 10px;
+        color: $neutral-600;
+        font-size: 18px;
+
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
