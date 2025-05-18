@@ -1,6 +1,14 @@
 @use '../abstracts/' as *;
 
 .nav {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 120px 0;
+  top: 0;
   ul {
     display: flex;
     align-items: center;
