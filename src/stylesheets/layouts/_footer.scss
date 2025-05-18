@@ -1,8 +1,41 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .footer {
   padding: 120px;
   background: $white;
+  position: relative;
+  // overflow: hidden;
+
+  &__background--1 {
+    top: -130px;
+    right: -130px;
+
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 438px;
+    height: 494px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    fill: #82bbff;
+    // opacity: 0.3;
+    filter: blur(60px);
+  }
+  &__background--2 {
+    top: -160px;
+    right: 90px;
+
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 438px;
+    height: 494px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    fill: #B9FF82;;
+    // opacity: 0.3;
+    filter: blur(60px);
+  }
 
   &__container {
     display: flex;
@@ -14,6 +47,7 @@
   }
 
   &__section {
+    z-index: 3;
     h3 {
       color: $neutral-900;
       font-family: $font-primary;

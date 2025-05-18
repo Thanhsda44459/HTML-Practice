@@ -2,3 +2,7 @@
 @use "layouts/" as *;
 @use "abstracts";
 @use "components";
+
+.container{
+    overflow: hidden;
+}

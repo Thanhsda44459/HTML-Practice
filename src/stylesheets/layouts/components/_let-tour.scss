@@ -1,15 +1,48 @@
 @use "../../abstracts/" as *;
 
 .let-tour {
+  position: relative;
   max-width: 100%;
-  padding: 120px 105px 130px 160px;
+  padding: 0px 105px 130px 160px;
   display: flex;
   justify-content: space-between;
+  // overflow: hidden;
+
+  &__background--1 {
+    top: -245px;
+    right: -190px;
+
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 438px;
+    height: 494px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    fill: #ff9882;
+    // opacity: 0.3;
+    filter: blur(60px);
+  }
+  &__background--2 {
+    top: -80px;
+    right: -190px;
+
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    width: 438px;
+    height: 494px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    fill: #FFFA82;
+    // opacity: 0.3;
+    filter: blur(60px);
+  }
 
   &__content {
     max-width: 480px;
     font-family: $font-primary;
-    
+
     &--title {
       color: $primary-color;
       font-size: 32px;
@@ -39,8 +72,8 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center; 
-      gap: 24px; 
+      justify-content: center;
+      gap: 24px;
     }
     &-item {
       display: flex;
@@ -57,21 +90,25 @@
   &__images {
     position: relative;
   }
-  
-  &__play-btn{
+
+  &__play-btn {
     position: absolute;
     left: 220px;
     top: 185px;
     cursor: pointer;
   }
-  
+
   &__main--image {
     position: absolute;
+    z-index: 3;
+    top: 0px;
+    right: 60px;
   }
-  
+
   &__thumbnails {
     position: absolute;
-    bottom: -40px;
-    left: -40px;
+    bottom: -90px;
+    left: -600px;
+    z-index: 4;
   }
 }
