@@ -2,20 +2,62 @@
 
 .partner {
   width: 100%;
-  padding: 4px 0;
+  padding: 0.25rem 0;
 
   h3 {
     color: $neutral-500;
     font-family: $font-primary;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 32px;
+    line-height: 2rem;
   }
 
   .partner-logos {
     display: flex;
     flex-direction: row;
-    gap: 32px;
-    height: 64px;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: 4rem;
   }
+}
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+ .partner-logos {
+    gap: 1rem;
+    height: 2rem;
+    justify-content: center;
+  }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+ .partner-logos {
+    gap: 1rem;
+    height: 2rem;
+    justify-content: center;
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+ .partner-logos {
+    gap: 1rem;
+    height: 2rem;
+    justify-content: center;
+  }
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+ .partner-logos {
+    gap: 1rem;
+    height: 2rem;
+    justify-content: center;
+  }
+}
+
+/* Extra large - Desktop (≥1200px) */
+@media (min-width: 1200px) {
+ 
 }
