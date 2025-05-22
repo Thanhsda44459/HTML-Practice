@@ -103,14 +103,22 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
    .nav{
     padding: 32px;
+    ul li{
+       border: 0.0625rem solid black;
+        a.nav__link {
+        color: #333;
+      }
+    }
    }
 }
+
 
 /* Large - Laptop (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
    .nav{
     padding: 32px;
    }
+
 }
 
 /* Extra large - Desktop (≥1200px) */

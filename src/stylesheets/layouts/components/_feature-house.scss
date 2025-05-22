@@ -41,6 +41,7 @@
 /* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .featured-house {
+    margin: 60px auto;
     padding:0 30px;
 
      &__header{
@@ -58,6 +59,7 @@
 /* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .featured-house {
+    margin: 40px auto;
     padding:0 30px;
 
      &__header{
@@ -75,6 +77,7 @@
 /* Extra small - Điện thoại nhỏ (<576px) */
 @media (max-width: 575.98px) {
   .featured-house {
+    margin: 40px auto;
     padding:0 30px;
 
      &__header{

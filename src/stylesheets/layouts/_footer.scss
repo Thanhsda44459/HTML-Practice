@@ -32,7 +32,7 @@
     height: 494px;
     transform: rotate(90deg);
     flex-shrink: 0;
-    fill: #B9FF82;;
+    fill: #b9ff82;
     // opacity: 0.3;
     filter: blur(60px);
   }
@@ -129,6 +129,254 @@
 
         &:hover {
           color: $secondary-color;
+        }
+      }
+    }
+  }
+}
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+   .footer {
+    padding: 60px;
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 50px;
+    }
+
+    &__section {
+      z-index: 3;
+      h3 {
+        font-size: 18px;
+        padding-bottom: 24px;
+      }
+
+      ul {
+        li {
+          margin-bottom: 8px;
+
+          a {
+            font-size: 14px;
+            font-style: normal;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+
+      .logo {
+        gap: 10px;
+        margin-bottom: 22px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-size: 16px;
+        }
+      }
+
+      .socials {
+        margin-top: 15px;
+
+        a {
+          margin-right: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .footer {
+    padding: 60px;
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 50px;
+    }
+
+    &__section {
+      z-index: 3;
+      h3 {
+        font-size: 18px;
+        padding-bottom: 24px;
+      }
+
+      ul {
+        li {
+          margin-bottom: 8px;
+
+          a {
+            font-size: 14px;
+            font-style: normal;
+          }
+        }
+      }
+
+      p {
+        width: 80%;
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+
+      .logo {
+        gap: 10px;
+        margin-bottom: 22px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-size: 16px;
+        }
+      }
+
+      .socials {
+        margin-top: 15px;
+
+        a {
+          margin-right: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .footer {
+    padding: 60px;
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 50px;
+    }
+
+    &__section {
+      z-index: 3;
+      h3 {
+        font-size: 18px;
+        padding-bottom: 24px;
+      }
+
+      ul {
+        li {
+          margin-bottom: 8px;
+
+          a {
+            font-size: 14px;
+            font-style: normal;
+          }
+        }
+      }
+
+      p {
+        width: 80%;
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+
+      .logo {
+        gap: 10px;
+        margin-bottom: 22px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-size: 16px;
+        }
+      }
+
+      .socials {
+        margin-top: 15px;
+
+        a {
+          margin-right: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding: 60px;
+
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 95px;
+    }
+
+    &__section {
+      z-index: 3;
+      h3 {
+        font-size: 18px;
+        padding-bottom: 24px;
+      }
+
+      ul {
+        li {
+          margin-bottom: 8px;
+
+          a {
+            font-size: 14px;
+            font-style: normal;
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+
+      .logo {
+        gap: 10px;
+        margin-bottom: 22px;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        h2 {
+          font-size: 20px;
+          font-size: 16px;
+        }
+      }
+
+      .socials {
+        margin-top: 15px;
+
+        a {
+          margin-right: 10px;
+          font-size: 18px;
         }
       }
     }

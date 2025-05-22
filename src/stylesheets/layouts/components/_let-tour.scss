@@ -3,7 +3,7 @@
 .let-tour {
   position: relative;
   max-width: 100%;
-  padding: 0px 105px 130px 160px;
+  padding: 0px 105px 130px 100px;
   display: flex;
   justify-content: space-between;
 
@@ -115,8 +115,11 @@
 /* Extra large - Desktop (≥1200px) */
 @media (min-width: 1200px) {
   .let-tour__main--image {
-    right: 20px;
-}
+    right: -15px;
+  }
+  .let-tour__thumbnails{
+    left: -512px;
+  }
 }
 
 /* Large - Laptop (≥992px) */
@@ -127,27 +130,36 @@
     &__content{
       width: 100%;
     }
-  &__images {
-    position: relative;
-  }  
+    &__images {
+      position: relative;
+    }  
 
     &__main--image {
       position: relative;
       width: 100%;
-      right: 0;
+      // right: 0;
+      right: 50%;
+      transform: translatex(68%);
       
       img{
-        width: 100%;
+        width: 70%;
       }
     }
     &__play-btn {
-    left: 47%;
-    top: 46%;
-  }
+      left: 36%;
+      top: 50%;
+    }
 
     &__thumbnails {
-      bottom: -48px;
-        left: 35px;
+      bottom: -7%;
+        left: 13%;
+
+      .let-tour__thumbnail{
+        // height: 25%;
+      }
+      .let-tour__thumbnail:first-child {
+        height: 50%;
+      }
     }
   }
 }
@@ -156,7 +168,7 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   .let-tour {
     flex-direction: column;
-    padding: 0 80px 80px 80px;
+    padding: 0 80px 40px 80px;
     &__content{
       width: 100%;
 
@@ -177,19 +189,29 @@
     &__main--image {
       position: relative;
       width: 100%;
-      right: 0;
+      // right: 0;
+      right: 50%;
+      transform: translatex(68%);
+      
       img{
-        width: 100%;
+        width: 70%;
       }
     }
     &__play-btn {
-    left: 47%;
-    top: 46%;
+      left: 36%;
+      top: 50%;
     }
 
-   &__thumbnails {
-      bottom: -48px;
-        left: 35px;
+     &__thumbnails {
+      bottom: -7%;
+        left: 13%;
+
+      .let-tour__thumbnail{
+        // height: 25%;
+      }
+      .let-tour__thumbnail:first-child {
+        width: 40%;
+      }
     }
   }
 }
@@ -241,30 +263,29 @@
     &__main--image {
       position: relative;
       width: 100%;
-      right: 0;
+      // right: 0;
+      right: 50%;
+      transform: translatex(68%);
+      
       img{
-        width: 100%;
+        width: 70%;
       }
     }
     &__play-btn {
-    left: 47%;
-    top: 46%;
+      left: 36%;
+      top: 50%;
     }
 
     &__thumbnails {
-      // display: flex;
-      display: none;
-      bottom: -48px;
-      left: 35px;
-      // width: 50%;
-      
+      bottom: -7%;
+        left: 13%;
+
       .let-tour__thumbnail{
-        width: 15%;
+        // height: 25%;
       }
       .let-tour__thumbnail:first-child {
-        width: 30%;
+        width: 40%;
       }
-      
     }
     
   }
@@ -325,8 +346,8 @@
       }
     }
     &__play-btn {
-    left: 43%;
-    top: 46%;
+      left: 43%;
+      top: 46%;
     }
 
     &__thumbnails {

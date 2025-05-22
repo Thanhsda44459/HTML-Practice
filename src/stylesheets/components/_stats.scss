@@ -82,7 +82,8 @@
 @media (max-width: 575.98px) {
   .stats{
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
+    margin: 20px;
     border-radius:  $border-radius-lg;
   }
 }
@@ -91,7 +92,8 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   .stats{
     position: relative;
-    width: 100%;
+    width: calc(100% - 40px);
+    margin: 20px;
     border-radius:  $border-radius-lg;
   }
 }
@@ -100,7 +102,8 @@
 @media (min-width: 768px) and (max-width: 991.98px) {
   .stats{
     position: relative;
-    width: 100%;
+    width: calc(100% - 50px);
+    margin: 25px;
     border-radius:  $border-radius-lg;
   }
   
@@ -108,8 +111,7 @@
 
 /* Large - Laptop (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
- 
- 
+
 }
 
 /* Extra large - Desktop (≥1200px) */
