@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .user-rw__reviews {
   position: relative;
@@ -15,7 +15,7 @@
     border-radius: 16px;
     transition: $transition-default;
     &:hover {
-        transform: scale(1.05);
+      transform: scale(1.05);
     }
 
     .user-rw__review-img {
@@ -43,6 +43,7 @@
       box-shadow: $box-shadow-light;
       left: 50%;
       transform: translateX(-50%);
+      overflow: hidden; /* Ngăn cuộn ngang trong content */
 
       .user-rw__review-header {
         color: $primary-color;
@@ -53,6 +54,7 @@
         line-height: normal;
         text-transform: capitalize;
         margin: 0;
+        word-break: break-word; /* Tự động xuống dòng */
       }
 
       .user-rw__review-text {
@@ -63,6 +65,7 @@
         font-weight: 400;
         line-height: 24px;
         margin: 0;
+        word-break: break-word; /* Tự động xuống dòng */
       }
 
       .user-rw-review-author {
@@ -119,6 +122,242 @@
           font-weight: 600;
           line-height: 28px;
         }
+      }
+    }
+  }
+}
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+  .user-rw__reviews {
+    // justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    overflow: hidden;
+    width: auto;
+
+    .user-rw__review-card {
+      width: 420px;
+      height: 405px;
+      .user-rw__review-img {
+        width: 420px;
+        height: 300px;
+       
+      }
+
+      .user-rw__review-content {
+        bottom: -10px;
+        z-index: 1;
+        width: 312px;
+        padding: 20px;
+        gap: 18px;
+        .user-rw__review-header {
+          font-size: 16px;
+        }
+
+        .user-rw__review-text {
+         
+          font-size: 12px;
+        }
+
+        .user-rw-review-author {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .user-rw-review-author-img {
+            width: 36px;
+            height: 36px;
+            margin-right: 20px;
+          }
+
+          .user-rw-review-author-info {
+            flex: 1;
+            width: 150px;
+          }
+
+          .user-rw-review-author-name {
+            font-size: 12px;
+            line-height: 18px;
+          }
+
+          .user-rw-review-author-role {
+            font-size: 12px;
+            line-height: 18px;
+            
+          }
+
+          .user-rw-review-author-rating {
+            margin-left: 10px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+   .user-rw__reviews {
+    // justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+    overflow: hidden;
+    width: auto;
+
+    .user-rw__review-card {
+      width: 520px;
+      height: 505px;
+      .user-rw__review-img {
+        width: 520px;
+        height: 400px;
+       
+      }
+
+      .user-rw__review-content {
+        bottom: -10px;
+        z-index: 1;
+        width: 412px;
+        padding: 20px;
+        gap: 18px;
+        .user-rw__review-header {
+          font-size: 16px;
+        }
+
+        .user-rw__review-text {
+         
+          font-size: 12px;
+        }
+
+        .user-rw-review-author {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .user-rw-review-author-img {
+            width: 36px;
+            height: 36px;
+            margin-right: 20px;
+          }
+
+          .user-rw-review-author-info {
+            flex: 1;
+            width: 150px;
+          }
+
+          .user-rw-review-author-name {
+            font-size: 12px;
+            line-height: 18px;
+          }
+
+          .user-rw-review-author-role {
+            font-size: 12px;
+            line-height: 18px;
+            
+          }
+
+          .user-rw-review-author-rating {
+            margin-left: 10px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .user-rw__reviews {
+    // justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    overflow: hidden;
+    width: auto;
+
+    .user-rw__review-card {
+      width: 620px;
+      height: 505px;
+      .user-rw__review-img {
+        width: 620px;
+        height: 400px;
+       
+      }
+
+      .user-rw__review-content {
+        bottom: -10px;
+        z-index: 1;
+        width: 512px;
+        padding: 20px;
+        gap: 18px;
+        .user-rw__review-header {
+          font-size: 16px;
+        }
+
+        .user-rw__review-text {
+         
+          font-size: 12px;
+        }
+
+        .user-rw-review-author {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          .user-rw-review-author-img {
+            width: 36px;
+            height: 36px;
+            margin-right: 20px;
+          }
+
+          .user-rw-review-author-info {
+            flex: 1;
+            width: 150px;
+          }
+
+          .user-rw-review-author-name {
+            font-size: 12px;
+            line-height: 18px;
+          }
+
+          .user-rw-review-author-role {
+            font-size: 12px;
+            line-height: 18px;
+            
+          }
+
+          .user-rw-review-author-rating {
+            margin-left: 10px;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .user-rw__reviews {
+    // justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    overflow: hidden;
+    width: auto;
+
+    .user-rw__review-card {
+      width: 720px;
+      height: 505px;
+      .user-rw__review-img {
+        width: 720px;
+        height: 400px;
+       
       }
     }
   }

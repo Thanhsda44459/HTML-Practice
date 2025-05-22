@@ -1,32 +1,28 @@
 @use '../abstracts/' as *;
 
 .header {
-  z-index: 100;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 45px 120px 0;
-  position: fixed;
-  top: 0;
+  position: relative;
+  
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    cursor: pointer;
 
-    img {
-      width: 36px;
-      height: 36px;
-    }
 
-    p {
-      color: $primary-color;
-      font-family: $font-primary;
-      font-size: 16px;
-      font-weight: 700;
-      text-transform: capitalize;
-    }
-  }
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
 }

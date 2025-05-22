@@ -1,5 +1,6 @@
 @use '../../abstracts/' as *;
 .user-rw {
+  
   &__header {
     margin: 0 auto;
     text-align: center;
@@ -52,4 +53,50 @@
       height: auto;
     }
   }
+}
+
+
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+.user-rw__header-tittle{
+  font-size: 22px;
+}
+
+ .user-rw__pagination{
+   padding: 10px 0;
+ }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .user-rw__header-tittle{
+  font-size: 24px;
+}
+
+ .user-rw__pagination{
+   padding: 10px 0;
+ }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .user-rw__header-tittle{
+  font-size: 26px;
+}
+
+ .user-rw__pagination{
+   padding: 10px 0;
+ }
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .user-rw__header-tittle{
+  font-size: 30px;
+}
+
+ .user-rw__pagination{
+   padding: 10px 0;
+ }
 }

@@ -1,22 +1,24 @@
 @use "../../abstracts/" as *;
 
 .subscribe {
-  margin: 0 auto;
-  border-radius: $border-radius-sm;
-  background: url("../assets/images/subscribe-background.png") $neutral-100 50% / cover no-repeat;
+  width: 100%;
+  padding: 60px;
 
-  width: 1200px;
-  height: 312px;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-
-  padding-top: 65px;
-  padding-bottom: 65px;
-  text-align: center;
+  &__container {
+    background: url("../assets/images/subscribe-background.png") $neutral-100
+      50% / cover no-repeat;
+    border-radius: $border-radius-sm;
+    width: 100%;
+    max-height: 312px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 65px 40px;
+    text-align: center;
+  }
 
   &__content {
-    width: 422px;
+    width: 100%;
     margin: 0 auto;
     color: $primary-color;
     text-align: center;
@@ -29,7 +31,8 @@
   }
 
   &__search {
-    width: 496px;
+    max-width: 496px;
+    width: 100%;
     margin: 32px auto 0 auto;
   }
 
@@ -80,3 +83,194 @@
     }
   }
 }
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+  .subscribe{
+     padding: 30px;
+
+     &__container {
+      max-height: 274px;
+      padding: 20px 20px;
+    }
+
+    &__content {
+      width: 100%;
+      margin: 0 auto;
+      font-size: 26px;
+      line-height: 35px;
+    }
+  }
+   .subscribe__img {
+    border-radius: 24px;
+    display: none;
+   }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .subscribe{
+     padding: 40px;
+
+     &__container {
+      max-height: 274px;
+       padding: 20px 20px;
+    }
+
+    &__content {
+      width: 100%;
+      margin: 0 auto;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+   .subscribe__img {
+    border-radius: 24px;
+    display: none;
+   }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .subscribe{
+    &__container {
+      max-height: 274px;
+       padding: 20px 20px;
+    }
+     padding: 40px;
+
+    &__content {
+      width: 100%;
+      margin: 0 auto;
+      font-size: 30px;
+      line-height: 40px;
+    }
+  }
+   .subscribe__img {
+    border-radius: 24px;
+    display: none;
+   }
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .subscribe{
+    &__container {
+      max-height: 312px;
+    }
+
+    &__content {
+      width: 422px;
+      margin: 0 auto;
+      font-size: 30px;
+      line-height: 42px;
+
+    }
+  }
+   .subscribe__img {
+    border-radius: 24px;
+
+    &--1 {
+      flex-shrink: 0;
+      top: 45px;
+      left: 173px;
+    }
+    &--2 {
+      flex-shrink: 0;
+     top: 142px;
+        left: 19px;
+    }
+    &--3 {
+      flex-shrink: 0;
+      top: 38px;
+      left: 44px;
+      width: 65px;
+    }
+    &--4 {
+      flex-shrink: 0;
+      top: 243px;
+        left: 103px;
+    }
+    &--5 {
+      flex-shrink: 0;
+      top: 101px;
+      right: 58px;
+    }
+    &--6 {
+      flex-shrink: 0;
+      top: 140px;
+      right: 172px;
+    }
+    &--7 {
+      flex-shrink: 0;
+      top: 239px;
+      right: 73px;
+    }
+    &--8 {
+      flex-shrink: 0;
+      top: 19px;
+      right: 130px;
+      width: 64px;
+    }
+  }
+}
+ @media (min-width: 1200px) {
+   .subscribe{
+    &__container {
+      max-height: 312px;
+    }
+    &__content {
+      width: 422px;
+      margin: 0 auto;
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    &__img {
+    border-radius: 24px;
+    // border: 2px solid $white;
+    position: absolute;
+
+    &--1 {
+      flex-shrink: 0;
+      top: 37px;
+        left: 214px;
+    }
+    &--2 {
+      flex-shrink: 0;
+      top: 173px;
+      left: 35px;
+    }
+    &--3 {
+      flex-shrink: 0;
+      top: 38px;
+      left: 44px;
+    }
+    &--4 {
+      flex-shrink: 0;
+      top: 216px;
+      left: 178px;
+    }
+    &--5 {
+      flex-shrink: 0;
+      top: 81px;
+      right: 58px;
+    }
+    &--6 {
+      flex-shrink: 0;
+      top: 175px;
+        right: 207px;
+    }
+    &--7 {
+      flex-shrink: 0;
+      top: 197px;
+      right: 73px;
+    }
+    &--8 {
+      flex-shrink: 0;
+      top: 44px;
+      right: 200px;
+    }
+  }
+  }
+ }
