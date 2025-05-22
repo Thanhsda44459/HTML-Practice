@@ -1,8 +1,7 @@
-@use '../../abstracts/' as *;
-
+@use "../../abstracts/" as *;
 
 .featured-house {
-  padding-left: 160px;
+  padding-left: 100px;
   max-width: 100%;
   margin: 140px auto;
 
@@ -20,5 +19,73 @@
     font-weight: 600;
     line-height: normal;
     text-transform: capitalize;
+  }
+}
+
+/* Extra large - Desktop (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .featured-house {
+    padding:0 60px;
+    &__header {
+    }
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .featured-house {
+    padding:0 30px;
+
+     &__header{
+      gap: 12px;
+      flex-direction: column;
+    }
+    &__header {
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .featured-house {
+    padding:0 30px;
+
+     &__header{
+      gap: 12px;
+      flex-direction: column;
+    }
+    &__header {
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+  .featured-house {
+    padding:0 30px;
+
+     &__header{
+      gap: 12px;
+      flex-direction: column;
+    }
+
+    &__header {
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
   }
 }

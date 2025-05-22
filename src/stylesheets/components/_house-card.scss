@@ -1,4 +1,4 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .featured-house {
   &__cards {
@@ -10,14 +10,14 @@
 
   &__card {
     position: relative;
-    min-width: 340px;
+    // min-width: 340px;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: $box-shadow-card;
     cursor: pointer;
     transition: $transition-default;
     &:hover {
-        transform: scale(0.95);
+      transform: scale(0.95);
     }
   }
 
@@ -116,5 +116,141 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 22px;
+  }
+}
+
+/* Extra large - Desktop (≥1200px) */
+@media (min-width: 1200px) {
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .featured-house {
+    &__cards {
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__card-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &__price {
+      font-size: 17px;
+      line-height: 32px;
+    }
+
+    &__seller-avatar {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__seller-name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .featured-house {
+    &__cards {
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__card-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &__price {
+      font-size: 17px;
+      line-height: 32px;
+    }
+
+    &__seller-avatar {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__seller-name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .featured-house {
+    &__cards {
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__card-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &__price {
+      font-size: 17px;
+      line-height: 32px;
+    }
+
+    &__seller-avatar {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__seller-name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+  }
+}
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+  .featured-house {
+    &__cards {
+      gap: 20px;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &__card-title {
+      font-size: 20px;
+      line-height: 32px;
+    }
+
+    &__price {
+      font-size: 17px;
+      line-height: 32px;
+    }
+
+    &__seller-avatar {
+      width: 36px;
+      height: 36px;
+    }
+
+    &__seller-name {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
   }
 }

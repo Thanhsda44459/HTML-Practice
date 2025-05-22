@@ -24,8 +24,105 @@
       background-color: $secondary-color;
 
       img {
-        filter: brightness(0) invert(1); /* Icon trắng trên nền xanh */
+        filter: brightness(0) invert(1);
       }
     }
   }
 }
+
+/* Extra large - Desktop (≥1200px) */
+@media (min-width: 1200px) {
+
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .featured-house {
+    &__nav {
+      display: flex;
+      gap: 12px;
+      margin-left: 8px;
+    }
+
+    &__nav-btn {
+    width: 60px;
+    height: 52px;
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+ .featured-house {
+    &__nav {
+      display: flex;
+      gap: 8px;
+      margin-left: 8px;
+    }
+
+     &__nav-btn {
+    width: 60px;
+    height: 52px;
+    padding: 0.7rem 1.3rem;
+    cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+ .featured-house {
+    &__nav {
+      display: flex;
+      gap: 8px;
+      margin-left: 8px;
+    }
+
+      &__nav-btn {
+    width: 60px;
+    height: 52px;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+.featured-house {
+    &__nav {
+      display: flex;
+      gap: 8px;
+      margin-left: 8px;
+    }
+
+     &__nav-btn {
+    width: 60px;
+    height: 52px;
+    padding: 0.7rem 1.2rem;
+    cursor: pointer;
+
+      img {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+} 

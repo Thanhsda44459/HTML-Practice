@@ -6,7 +6,7 @@
   padding: 0px 105px 130px 160px;
   display: flex;
   justify-content: space-between;
-  // overflow: hidden;
+
 
   &__background--1 {
     top: -245px;
@@ -20,7 +20,6 @@
     transform: rotate(90deg);
     flex-shrink: 0;
     fill: #ff9882;
-    // opacity: 0.3;
     filter: blur(60px);
   }
   &__background--2 {
@@ -35,12 +34,11 @@
     transform: rotate(90deg);
     flex-shrink: 0;
     fill: #FFFA82;
-    // opacity: 0.3;
     filter: blur(60px);
   }
 
   &__content {
-    max-width: 480px;
+    width: 480px;
     font-family: $font-primary;
 
     &--title {
@@ -107,8 +105,238 @@
 
   &__thumbnails {
     position: absolute;
-    bottom: -90px;
-    left: -600px;
+    bottom: -50px;
+    left: -590px;
     z-index: 4;
+  }
+}
+
+
+/* Extra large - Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .let-tour__main--image {
+    right: 20px;
+}
+}
+
+/* Large - Laptop (≥992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .let-tour {
+    flex-direction: column;
+    padding: 0 90px 90px 90px;
+    &__content{
+      width: 100%;
+    }
+  &__images {
+    position: relative;
+  }  
+
+    &__main--image {
+      position: relative;
+      width: 100%;
+      right: 0;
+      
+      img{
+        width: 100%;
+      }
+    }
+    &__play-btn {
+    left: 47%;
+    top: 46%;
+  }
+
+    &__thumbnails {
+      bottom: -48px;
+        left: 35px;
+    }
+  }
+}
+
+/* Medium - Máy tính bảng (≥768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .let-tour {
+    flex-direction: column;
+    padding: 0 80px 80px 80px;
+    &__content{
+      width: 100%;
+
+      &--title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      &--desc {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+      }
+    }
+  &__images {
+    position: relative;
+  }  
+
+    &__main--image {
+      position: relative;
+      width: 100%;
+      right: 0;
+      img{
+        width: 100%;
+      }
+    }
+    &__play-btn {
+    left: 47%;
+    top: 46%;
+    }
+
+   &__thumbnails {
+      bottom: -48px;
+        left: 35px;
+    }
+  }
+}
+
+/* Small - Điện thoại lớn (≥576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .let-tour {
+    flex-direction: column;
+    padding: 0 60px 60px 60px;
+    &__content{
+      width: 100%;
+
+      &--title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      &--desc {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    &__detail {
+    margin: 12px 0 15px;
+
+      &-title {
+        font-size: 14px;
+        line-height: 24px;
+      }
+      &-list {
+        margin-top: 0px;
+        gap: 12px;
+      }
+      &-item {
+        gap: 12px;
+        font-size: 13px;
+       
+        span{
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+  &__images {
+    position: relative;
+  }  
+
+    &__main--image {
+      position: relative;
+      width: 100%;
+      right: 0;
+      img{
+        width: 100%;
+      }
+    }
+    &__play-btn {
+    left: 47%;
+    top: 46%;
+    }
+
+    &__thumbnails {
+      // display: flex;
+      display: none;
+      bottom: -48px;
+      left: 35px;
+      // width: 50%;
+      
+      .let-tour__thumbnail{
+        width: 15%;
+      }
+      .let-tour__thumbnail:first-child {
+        width: 30%;
+      }
+      
+    }
+    
+  }
+}
+
+
+/* Extra small - Điện thoại nhỏ (<576px) */
+@media (max-width: 575.98px) {
+  .let-tour {
+    flex-direction: column;
+    padding: 0 1.5rem 3rem 1.5rem;
+    &__content{
+      width: 100%;
+
+      &--title {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+
+      &--desc {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    &__detail {
+    margin: 12px 0 15px;
+
+    &-title {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &-list {
+      margin-top: 0px;
+      gap: 12px;
+    }
+    &-item {
+      gap: 12px;
+      font-size: 13px;
+     
+      span{
+         font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+
+  &__images {
+    position: relative;
+  }  
+
+    &__main--image {
+      position: relative;
+      width: 100%;
+      right: 0;
+      img{
+        width: 100%;
+      }
+    }
+    &__play-btn {
+    left: 43%;
+    top: 46%;
+    }
+
+    &__thumbnails {
+      bottom: -20px;
+      left: 0px;
+      display: none; 
+      img{
+      width: 50%;
+    }
+    }
+    
   }
 }
