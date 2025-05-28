@@ -32,31 +32,26 @@
 
   &__label {
     position: absolute;
-    bottom: 160px;
+    bottom: 10%;
     left: 16px;
     padding: 8px 16px;
     border-radius: $border-radius-sm;
-    font-family: $font-primary;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
+    @include see-link($red-500, 500);
     align-items: flex-start;
     gap: 10px;
 
     &--popular {
       background: $red-100;
-      color: $red-500;
     }
 
     &--new {
       background: $blue-100;
-      color: $blue-700;
+      @include see-link($blue-700, 500);
     }
 
     &--best-deals {
       background: $green-100;
-      color: $green-700;
+      @include see-link($green-700, 500);
     }
   }
 
@@ -66,19 +61,12 @@
   }
 
   &__card-title {
-    color: $neutral-900;
-    font-family: $font-primary;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
+    @include heading-title(24px, 500, 32px, $neutral-900);
   }
 
   &__price {
-    color: $neutral-700;
-    font-family: $font-primary;
-    font-size: 20px;
+    @include description(20px, 32px, $neutral-700);
     font-weight: 500;
-    line-height: 32px;
   }
 
   &__seller {
@@ -88,45 +76,32 @@
     position: relative;
 
     img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
+      @include avatar(40px);
       position: relative;
       z-index: 1;
     }
   }
 
   &__seller-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
+    @include avatar(40px);
   }
 
   &__seller-name {
-    color: $neutral-900;
-    font-family: $font-primary;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
+    @include heading-title(18px, 500, 24px, $neutral-900);
   }
 
   &__seller-location {
-    color: $neutral-500;
-    font-family: $font-primary;
-    font-size: 14px;
+    @include description(14px, 22px, $neutral-500);
     font-weight: 500;
-    line-height: 22px;
   }
 }
 
 /* Extra large - Desktop (≥1200px) */
 @media (min-width: 1200px) {
-  .featured-house__card{
+  .featured-house__card {
     flex: 1 1 calc(25% - 30px);
-    //  gap: 30px;
   }
+
   .featured-house__card-image {
     object-fit: cover;
     border-radius: 0 0 20px 20px;
@@ -140,32 +115,29 @@
       object-fit: cover;
       border-radius: 0 0 20px 20px;
     }
+
     &__cards {
-    
     }
+
     &__card {
       flex: 1 1 calc(33.33% - 30px);
     }
 
     &__card-title {
-      font-size: 20px;
-      line-height: 32px;
+      @include heading-title(20px, 500, 32px, $neutral-900);
     }
 
     &__price {
-      font-size: 17px;
-      line-height: 32px;
+      @include description(17px, 32px, $neutral-700);
+      font-weight: 500;
     }
 
     &__seller-avatar {
-      width: 36px;
-      height: 36px;
+      @include avatar(36px);
     }
 
     &__seller-name {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
+      @include heading-title(16px, 500, 20px, $neutral-900);
     }
   }
 }
@@ -176,30 +148,27 @@
     &__card {
       flex: 1 1 calc(50% - 30px);
     }
+
     &__card-image {
       object-fit: cover;
       border-radius: 0 0 20px 20px;
     }
 
     &__card-title {
-      font-size: 20px;
-      line-height: 32px;
+      @include heading-title(20px, 500, 32px, $neutral-900);
     }
 
     &__price {
-      font-size: 17px;
-      line-height: 32px;
+      @include description(17px, 32px, $neutral-700);
+      font-weight: 500;
     }
 
     &__seller-avatar {
-      width: 36px;
-      height: 36px;
+      @include avatar(36px);
     }
 
     &__seller-name {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
+      @include heading-title(16px, 500, 20px, $neutral-900);
     }
   }
 }
@@ -208,34 +177,27 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
   .featured-house {
     &__card {
-      // gap: 20px;
-       flex: 1 1 calc(50% - 20px);
+      flex: 1 1 calc(50% - 20px);
     }
 
     &__card-image {
-     
     }
 
-
     &__card-title {
-      font-size: 20px;
-      line-height: 32px;
+      @include heading-title(20px, 500, 32px, $neutral-900);
     }
 
     &__price {
-      font-size: 17px;
-      line-height: 32px;
+      @include description(17px, 32px, $neutral-700);
+      font-weight: 500;
     }
 
     &__seller-avatar {
-      width: 36px;
-      height: 36px;
+      @include avatar(36px);
     }
 
     &__seller-name {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
+      @include heading-title(16px, 500, 20px, $neutral-900);
     }
   }
 }
@@ -247,31 +209,27 @@
       flex: 1 1 100%;
       max-width: 100%;
     }
+
     &__card-image {
       object-fit: cover;
       border-radius: 0 0 20px 20px;
     }
 
-
     &__card-title {
-      font-size: 20px;
-      line-height: 32px;
+      @include heading-title(20px, 500, 32px, $neutral-900);
     }
 
     &__price {
-      font-size: 17px;
-      line-height: 32px;
+      @include description(17px, 32px, $neutral-700);
+      font-weight: 500;
     }
 
     &__seller-avatar {
-      width: 36px;
-      height: 36px;
+      @include avatar(36px);
     }
 
     &__seller-name {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 20px;
+      @include heading-title(16px, 500, 20px, $neutral-900);
     }
   }
 }

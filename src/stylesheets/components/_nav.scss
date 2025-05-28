@@ -17,20 +17,18 @@
     cursor: pointer;
 
     p {
-      color: $primary-color;
-      font-family: $font-primary;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: capitalize;
+      @include heading-title(1rem, 700, normal);
     }
-    img{
+
+    img {
       display: inline-block;
     }
   }
 
-  .nav__logo--mobile{
+  .nav__logo--mobile {
     display: none;
   }
+
   ul {
     display: flex;
     align-items: center;
@@ -46,9 +44,7 @@
       transition: $transition-default;
 
       &.nav__item--signup {
-        background: $secondary-color;
-        font-weight: 600;
-        padding: 0.75rem 1.5rem;
+        @include button-default($secondary-color, 0.75rem 1.5rem);
       }
 
       &:hover,
@@ -57,11 +53,7 @@
       }
 
       a.nav__link {
-        color: $neutral-100;
-        font-family: $font-primary;
-        font-size: 0.875rem;
-        font-weight: 600;
-        text-transform: capitalize;
+        @include see-link($neutral-100, 600);
         text-decoration: none;
       }
     }
@@ -70,58 +62,60 @@
 
 /* Extra small - Điện thoại nhỏ (<576px) */
 @media (max-width: 575.98px) {
- .nav{
+  .nav {
     padding: 32px;
-    .nav__logo--mobile{
-      display:inline-block;
+
+    .nav__logo--mobile {
+      display: inline-block;
       width: 20px;
       height: auto;
     }
-    ul{
-      display: none;
 
-    };
+    ul {
+      display: none;
+    }
   }
 }
 
 /* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .nav{
+  .nav {
     padding: 32px;
-    .nav__logo--mobile{
-      display:inline-block;
+
+    .nav__logo--mobile {
+      display: inline-block;
       width: 20px;
       height: auto;
     }
-    ul{
+
+    ul {
       display: none;
-    };
+    }
   }
 }
 
 /* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-   .nav{
+  .nav {
     padding: 32px;
-    ul li{
-       border: 0.0625rem solid black;
-        a.nav__link {
-        color: #333;
+
+    ul li {
+      border: 0.0625rem solid black;
+
+      a.nav__link {
+        @include see-link(#333, 600);
       }
     }
-   }
+  }
 }
-
 
 /* Large - Laptop (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-   .nav{
+  .nav {
     padding: 32px;
-   }
-
+  }
 }
 
 /* Extra large - Desktop (≥1200px) */
 @media (min-width: 1200px) {
- 
 }
