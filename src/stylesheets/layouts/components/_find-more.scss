@@ -106,21 +106,21 @@
 /* Extra small - Điện thoại nhỏ (<576px) */
 @media (max-width: 575.98px) {
   .find-more {
-    padding: 50px;
+    padding: 16px;
   }
 }
 
 /* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .find-more {
-  padding: 50px;
+    padding: 20px;
   }
 }
 
 /* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .find-more {
-  padding: 50px;
+    padding: 30px;
   }
 }
 
@@ -128,7 +128,7 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
    .find-more {
   margin: 80px 0 0 0;
-  padding: 50px;
+  padding: 40px;
   position: relative;
   
   &__header {
