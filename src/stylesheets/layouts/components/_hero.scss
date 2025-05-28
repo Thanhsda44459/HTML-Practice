@@ -34,13 +34,11 @@
     flex-direction: column;
     justify-content: center;
     padding: 3rem 15% 3rem 3rem;
+
     h1 {
-      z-index: 3;
+      @include heading-title(2.5rem, 600, normal, $primary-color);
       margin-bottom: 1.5rem;
-      color: $primary-color;
-      font-family: $font-primary;
-      font-size: 2.5rem;
-      font-weight: 600;
+      z-index: 3;
     }
 
     .highlight {
@@ -53,101 +51,77 @@
     }
 
     p {
-      color: $neutral-600;
-      font-family: $font-primary;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.75rem;
+      @include description(1rem, 1.75rem, $neutral-600);
     }
   }
 }
 
-
-
-
-
-
-
-
-
-/* Extra large - Desktop (≥1200px) */
-@media (min-width: 1200px) {
- 
-}
-
-/* Large - Laptop (≥992px) */
+/* Responsive */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-   .hero-section .hero-left{
-    h1{
-          font-size: 2rem;
+  .hero-section .hero-left {
+    h1 {
+      @include heading-title(2rem, 600, normal, $primary-color);
     }
-    p{
-          font-size: 0.9rem;
+    p {
+      @include description(0.9rem, 1.5rem, $neutral-600);
     }
-     .highlight{
-    font-size: 2rem;
+    .highlight {
+      font-size: 2rem;
+    }
   }
-  }
- 
 }
 
-/* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  .hero-section .hero-content{
+  .hero-section .hero-content {
     flex-direction: column;
   }
-   .hero-section .hero-left{
+  .hero-section .hero-left {
     width: 100%;
-    h1{
-          font-size: 2rem;
+    h1 {
+      @include heading-title(2rem, 600, normal, $primary-color);
     }
-    p{
-          font-size: 1rem;
+    p {
+      @include description(1rem, 1.75rem, $neutral-600);
     }
-    .highlight{
-    font-size: 2rem;
+    .highlight {
+      font-size: 2rem;
     }
   }
-  
 }
 
-/* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-   .hero-section .hero-content{
+  .hero-section .hero-content {
     flex-direction: column;
   }
-   .hero-section .hero-left{
+  .hero-section .hero-left {
     width: 100%;
-    h1{
-          font-size: 1.5rem;
+    h1 {
+      @include heading-title(1.5rem, 600, normal, $primary-color);
     }
-    p{
-          font-size: 0.6rem;
+    p {
+      @include description(0.6rem, 1.25rem, $neutral-600);
     }
-    .highlight{
-    font-size: 1.5rem;
-    }
-  }
-  
-}
-
-/* Extra small - Điện thoại nhỏ (<576px) */
-@media (max-width: 575.98px) {
-   .hero-section .hero-content{
-    flex-direction: column;
-  }
-  .hero-section .hero-left{
-    padding: 3rem 15% 1rem 3rem;
-    width: 100%;
-    h1{
+    .highlight {
       font-size: 1.5rem;
     }
-    p{
-      font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section .hero-content {
+    flex-direction: column;
+  }
+  .hero-section .hero-left {
+    padding: 3rem 15% 1rem 3rem;
+    width: 100%;
+    h1 {
+      @include heading-title(1.5rem, 600, normal, $primary-color);
     }
-    .highlight{
-    font-size: 1.5rem;
+    p {
+      @include description(0.6rem, 1.25rem, $neutral-600);
+    }
+    .highlight {
+      font-size: 1.5rem;
     }
   }
-  
 }

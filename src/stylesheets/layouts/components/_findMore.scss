@@ -6,47 +6,36 @@
   background: $white;
   position: relative;
   
-  &__background--1 {
+  &__background--1,
+  &__background--2 {
     position: absolute;
-    top: 30px;
-    left: 10px;
     z-index: 2;
     pointer-events: none;
     width: 438px;
     height: 494px;
     transform: rotate(90deg);
     flex-shrink: 0;
-    fill: #82ffe8;
-    // opacity: 0.3;
     filter: blur(60px);
   }
 
-   &__background--2 {
-    position: absolute;
+  &__background--1 {
+    top: 30px;
+    left: 10px;
+    fill: #82ffe8;
+  }
+
+  &__background--2 {
     top: 290px;
     left: 10px;
-    z-index: 2;
-    pointer-events: none;
-    width: 438px;
-    height: 494px;
-    transform: rotate(90deg);
-    flex-shrink: 0;
     fill: #C8FF82;
-    // opacity: 0.3;
-    filter: blur(60px);
   }
 
   &__header {
     text-align: center;
+
     .find-more__see-tips {
-      color: $yellow-500;
+      @include see-link($yellow-500, 500);
       text-align: center;
-      font-family: $font-primary;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-      text-transform: capitalize;
       position: relative;
       margin-bottom: 12px;
       cursor: pointer;
@@ -64,34 +53,15 @@
     }
 
     .find-more__title {
-      color: $primary-color;
+      @include heading-title(32px, 600, normal, $primary-color);
       text-align: center;
-      font-family: $font-primary;
-      font-size: 32px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: normal;
-      text-transform: capitalize;
       margin-bottom: 24px;
     }
 
     .find-more__btn {
-      text-decoration: none;
-      color: $white;
-      font-family: $font-primary;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 22px;
-      cursor: pointer;
-
-      display: inline-flex;
-      padding: 12px 16px;
-      align-items: center;
-      gap: 16px;
-      border-radius: $border-radius-sm;
-      background: $secondary-color;
+      @include button-default($secondary-color, 12px 16px);
       margin-bottom: 40px;
+      cursor: pointer;
       transition: $transition-default;
 
       &:hover {
@@ -101,66 +71,52 @@
   }
 }
 
-
-
-/* Extra small - Điện thoại nhỏ (<576px) */
+/* Responsive */
 @media (max-width: 575.98px) {
   .find-more {
     padding: 16px;
   }
 }
 
-/* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .find-more {
     padding: 20px;
   }
 }
 
-/* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .find-more {
     padding: 30px;
   }
 }
 
-/* Large - Laptop (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-   .find-more {
-  margin: 80px 0 0 0;
-  padding: 40px;
-  position: relative;
-  
-  &__header {
-    text-align: center;
+  .find-more {
+    margin: 80px 0 0 0;
+    padding: 40px;
+    position: relative;
 
-    .find-more__see-tips {
+    &__header {
       text-align: center;
-      font-size: 14px;
-      margin-bottom: 12px;
 
-    }
+      .find-more__see-tips {
+        font-size: 14px;
+        margin-bottom: 12px;
+      }
 
-    .find-more__title {
-      font-size: 30px;
-      font-weight: 600;
-      line-height: normal;
-      margin-bottom: 24px;
-    }
+      .find-more__title {
+        @include heading-title(30px, 600, normal, $primary-color);
+        margin-bottom: 24px;
+      }
 
-    .find-more__btn {
-      font-size: 14px;
-      line-height: 22px;
-      display: inline-flex;
-      padding: 12px 16px;
-      gap: 16px;
-      margin-bottom: 40px;
+      .find-more__btn {
+        font-size: 14px;
+        line-height: 22px;
+        display: inline-flex;
+        padding: 12px 16px;
+        gap: 16px;
+        margin-bottom: 40px;
+      }
     }
   }
-}
-}
-
-/* Extra large - Desktop (≥1200px) */
-@media (min-width: 1200px) {
-
 }
