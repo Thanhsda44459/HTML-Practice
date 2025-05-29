@@ -7,20 +7,25 @@
   gap: 56px;
   padding: 20px 0;
   overflow: hidden;
+  width: 100%;
 
   .user-rw__review-card {
+    flex-shrink: 0;
     position: relative;
-    width: 740px;
+    width: 80%;
+    max-width: 740px;
     height: 505px;
     border-radius: 16px;
     transition: $transition-default;
     &:hover {
-      transform: scale(1.05);
+      transform: scale(0.95);
     }
 
     .user-rw__review-img {
-      width: 740px;
-      height: 400px;
+      // width: 740px;
+      width: 100%;
+      max-height: 400px;
+      // height: auto;
       object-fit: cover;
       top: 0;
       left: 0;
@@ -32,7 +37,8 @@
       position: absolute;
       bottom: 32px;
       z-index: 1;
-      width: 612px;
+      max-width: 612px;
+      width: 80%;
       padding: 32px;
       display: flex;
       flex-direction: column;
@@ -43,7 +49,7 @@
       box-shadow: $box-shadow-light;
       left: 50%;
       transform: translateX(-50%);
-      overflow: hidden; /* Ngăn cuộn ngang trong content */
+      overflow: hidden;
 
       .user-rw__review-header {
         color: $primary-color;
@@ -54,7 +60,11 @@
         line-height: normal;
         text-transform: capitalize;
         margin: 0;
-        word-break: break-word; /* Tự động xuống dòng */
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .user-rw__review-text {
@@ -65,7 +75,11 @@
         font-weight: 400;
         line-height: 24px;
         margin: 0;
-        word-break: break-word; /* Tự động xuống dòng */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .user-rw-review-author {
@@ -130,33 +144,24 @@
 /* Extra small - Điện thoại nhỏ (<576px) */
 @media (max-width: 575.98px) {
   .user-rw__reviews {
-    // justify-content: center;
     gap: 15px;
     padding: 15px 0;
-    overflow: hidden;
-    width: auto;
 
     .user-rw__review-card {
-      width: 420px;
-      height: 405px;
+      height: 400px;
       .user-rw__review-img {
-        width: 420px;
-        height: 300px;
-       
+        height: 250px;
       }
 
       .user-rw__review-content {
-        bottom: -10px;
+        bottom: 8%;
         z-index: 1;
-        width: 312px;
         padding: 20px;
         gap: 18px;
         .user-rw__review-header {
           font-size: 16px;
         }
-
         .user-rw__review-text {
-         
           font-size: 12px;
         }
 
@@ -185,7 +190,6 @@
           .user-rw-review-author-role {
             font-size: 12px;
             line-height: 18px;
-            
           }
 
           .user-rw-review-author-rating {
@@ -200,20 +204,14 @@
 }
 /* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-   .user-rw__reviews {
-    // justify-content: center;
+  .user-rw__reviews {
     gap: 15px;
     padding: 15px 0;
-    overflow: hidden;
-    width: auto;
 
     .user-rw__review-card {
-      width: 520px;
-      height: 505px;
+      height: 410px;
       .user-rw__review-img {
-        width: 520px;
-        height: 400px;
-       
+        height: 310px;
       }
 
       .user-rw__review-content {
@@ -227,7 +225,6 @@
         }
 
         .user-rw__review-text {
-         
           font-size: 12px;
         }
 
@@ -256,7 +253,6 @@
           .user-rw-review-author-role {
             font-size: 12px;
             line-height: 18px;
-            
           }
 
           .user-rw-review-author-rating {
@@ -277,15 +273,11 @@
     gap: 25px;
     padding: 15px 0;
     overflow: hidden;
-    width: auto;
 
     .user-rw__review-card {
-      width: 620px;
       height: 505px;
       .user-rw__review-img {
-        width: 620px;
         height: 400px;
-       
       }
 
       .user-rw__review-content {
@@ -299,7 +291,6 @@
         }
 
         .user-rw__review-text {
-         
           font-size: 12px;
         }
 
@@ -328,7 +319,6 @@
           .user-rw-review-author-role {
             font-size: 12px;
             line-height: 18px;
-            
           }
 
           .user-rw-review-author-rating {
@@ -349,15 +339,11 @@
     gap: 25px;
     padding: 15px 0;
     overflow: hidden;
-    width: auto;
 
     .user-rw__review-card {
-      width: 720px;
       height: 505px;
       .user-rw__review-img {
-        width: 720px;
         height: 400px;
-       
       }
     }
   }

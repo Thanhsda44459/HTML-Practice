@@ -1,99 +1,81 @@
 @use '../abstracts/' as *;
+
 .let-tour__contact {
-    display: flex;
-    padding: 30px;
-    border-top: solid 2px $neutral-500;
-    justify-content: space-between;
-    
-    &-pic {
-      padding-right: 24px;
-    }
-    &-info {
-      
-      flex: 1;
-      align-items: center;
-    }
-    &-name {
-      color: $neutral-900;
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 24px;
-    }
-    &-role {
-      color: $neutral-500;
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 24px;
-    }
-    &-btn {
-      display: inline-flex;
-      padding: 12px 16px;
-      align-items: center;
-      gap: 16px;
-      cursor: pointer;
-      border: none;
-      border-radius: $border-radius-sm;
-      background: $secondary-color;
+  display: flex;
+  padding: 30px;
+  border-top: solid 2px $neutral-500;
+  justify-content: space-between;
 
-      color: #FFF;
-      font-family: Lexend;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 22px; /* 157.143% */
+  &-pic {
+    padding-right: 24px;
+  }
 
-      &:hover {
+  &-info {
+    flex: 1;
+    align-items: center;
+  }
+
+  &-name {
+    @include heading-title(18px, 500, 24px, $neutral-900);
+  }
+
+  &-role {
+    @include description(16px, 24px, $neutral-500);
+    font-weight: 500;
+  }
+
+  &-btn {
+    @include button-default($secondary-color, 12px 16px);
+    cursor: pointer;
+    border: none;
+
+    &:hover {
       background: darken($secondary-color, 10%);
-      }
     }
+  }
 }
-
 
 /* Extra large - Desktop (≥1200px) */
 @media (min-width: 1200px) {
- 
 }
 
 /* Large - Laptop (≥992px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
- 
 }
 
 /* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  
 }
 
 /* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-   
 }
 
 /* Extra small - Điện thoại nhỏ (<576px) */
 @media (max-width: 575.98px) {
   .let-tour__contact {
-    padding :15px 0;
+    padding: 15px 0;
 
     &-pic {
       padding-right: 20px;
     }
+
     &-info {
       flex: 1;
     }
+
     &-name {
-      font-size: 12px;
-      line-height: 22px;
+      @include heading-title(12px, 500, 22px, $neutral-900);
     }
+
     &-role {
-      color: $neutral-500;
-      font-size: 10px;
-      line-height: 22px;
+      @include description(10px, 22px, $neutral-500);
+      font-weight: 500;
     }
+
     &-btn {
-      padding: 10px 12px;
+      @include button-default($secondary-color, 10px 12px);
       gap: 10px;
-      font-size: 14px;
-      line-height: 22px;
     }
-}
+  }
 }

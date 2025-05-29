@@ -1,8 +1,9 @@
-
+<div id="main">
  <!-- Include Feature-house section -->
-<include src="./layout/components/featured-houses.html"></include>
+<include src="./layout/components/featuredHouses.html"></include>
+
  <!-- Include Let-tour section -->
-<include src="./layout/components/let-tour.html" locals='{
+<include src="./layout/components/letTour.html" locals='{
     "detail": [
         {"img": "../assets/icons/bed.svg", "text": "4 Bedrooms"},
         {"img": "../assets/icons/bath.svg", "text": "2 Bathrooms"},
@@ -17,9 +18,11 @@
 }'></include>
 
 <!-- Include User-review section -->
- <include src="./layout/components/user-review.html"></include>
+ <include src="./layout/components/userReview.html"></include>
+
 <!-- Include Find more section -->
-  <include src="./layout/components/find-more.html"></include>
+  <include src="./layout/components/findMore.html"></include>
+  
 <!-- Include subcribe -->
   <include src="./layout/components/subcribe.html" locals='{
     "images": [
@@ -33,3 +36,4 @@
       { "img":"../assets/images/subscribe-house-2.png","class":"subscribe__img--8" }
     ]
   }'></include>
+</div>

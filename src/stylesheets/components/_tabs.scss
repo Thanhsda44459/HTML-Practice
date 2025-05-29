@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts/' as *;
 
 .featured-house {
   &__tabs {
@@ -7,22 +7,15 @@
   }
 
   &__tab {
-    display: flex;
-    padding: 0.875rem 1.5rem;
-    align-items: center;
-    gap: 0.5rem;
-    border-radius: $border-radius-sm;
+    @include button-default($background: $white, $padding: 0.875rem 1.5rem);
     border: 0.0625rem solid $neutral-300;
     cursor: pointer;
-    background: $white;
-    font-family: $font-primary;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.75rem;
 
     img {
-      width: 1.5rem;
-      height: 1.5rem;
+      @include avatar(1.5rem);
     }
 
     &--active {
@@ -37,13 +30,7 @@
   }
 }
 
-
-/* Extra large - Desktop (≥1200px) */
-@media (min-width: 1200px) {
-
-}
-
-/* Large - Laptop (≥992px) */
+/* Responsive */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .featured-house {
     &__tabs {
@@ -54,18 +41,16 @@
       padding: 0.8rem 1.4rem;
       font-size: 1rem;
       line-height: 1.5rem;
+
       img {
-      width: 1.4rem;
-      height: 1.4rem;
+        @include avatar(1.4rem);
       }
     }
-   
   }
 }
 
-/* Medium - Máy tính bảng (≥768px) */
 @media (min-width: 768px) and (max-width: 991.98px) {
- .featured-house {
+  .featured-house {
     &__tabs {
       gap: 20px;
     }
@@ -74,17 +59,16 @@
       padding: 0.8rem 1.4rem;
       font-size: 1rem;
       line-height: 1.5rem;
-       img {
-      width: 1.4rem;
-      height: 1.4rem;
+
+      img {
+        @include avatar(1.4rem);
       }
     }
   }
 }
 
-/* Small - Điện thoại lớn (≥576px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
- .featured-house {
+  .featured-house {
     &__tabs {
       display: flex;
       gap: 20px;
@@ -94,17 +78,16 @@
       padding: 0.7rem 1.3rem;
       font-size: 0.9rem;
       line-height: 1.4rem;
-       img {
-      width: 1.3rem;
-      height: 1.3rem;
+
+      img {
+        @include avatar(1.3rem);
       }
     }
   }
 }
 
-/* Extra small - Điện thoại nhỏ (<576px) */
 @media (max-width: 575.98px) {
-.featured-house {
+  .featured-house {
     &__tabs {
       display: flex;
       gap: 20px;
@@ -114,10 +97,10 @@
       padding: 0.7rem 1.3rem;
       font-size: 0.9rem;
       line-height: 1.4rem;
-       img {
-      width: 1.3rem;
-      height: 1.3rem;
+
+      img {
+        @include avatar(1.3rem);
       }
     }
   }
-} 
+}
